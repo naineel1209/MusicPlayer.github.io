@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player v1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d8ad7f3af4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="music_box">
+            <!-- ! Music Player -->
+            <h2 id="songName">AXIOS PATEL</h2>
+            <h3 id="artistName">Killer Mashuka</h3>
+            <div class="image_box">
+                <img id="image" src="./Images/pexels-1.jpg" alt="" srcset="">
+            </div>
+            <audio id="music" src="./music/beleiver.mp3"></audio>
+
+            <!-- !Progress Bar  -->
+            <div class="progressBar_container" id="progressBar_container">
+                <div class="durationBox">
+                    <div class="cTime">
+                        <span id="currentTime_hour">00</span><b style="font-size: larger;">:</b><span
+                            id="currentTime_mins">00</span>
+                    </div>
+
+                    <div class="dTime">
+                        <span id="duration_hour">00</span><b style="font-size: larger;">:</b><span
+                            id="duration_mins">00</span>
+                    </div>
+
+                </div>
+
+                <div class="progressBar">
+                    <div class="progressDiv"></div>
+                </div>
+            </div>
+
+            <!-- ! Controls -->
+            <div class="music_controls">
+                <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+                <i class="fa-solid fa-play" id="play" title="Play"></i>
+                <i class="fa-solid fa-forward" id="next" title="Next"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="music_list"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
