@@ -1,3 +1,7 @@
+"use strict";
+
+
+
 const music = document.querySelector("#music");
 
 const image = document.querySelector("#image");
@@ -52,6 +56,12 @@ const audioDB = [
     artistName: "Imagine Dragons",
     imageCover: "./Images/pexels-1.jpg",
   },
+  {
+    songName: "3:59",
+    songUrl: "./music/359.mp3",
+    artistName: "Divine",
+    imageCover: "./Images/pexels-2.jpg"
+  }
 ];
 
 //!Getting the music list and appending it music list html
@@ -151,8 +161,10 @@ play.addEventListener("click", () => {
 prev.addEventListener("click", function (e) {
   audioIndex = (audioIndex - 1 + audioLen) % audioLen;
   loadMusic(audioDB[audioIndex]);
+
   progressDiv.style.width = `0%`;
   music.currentTime = 0;
+  
   isPlaying ? playMusic() : pauseMusic();
 });
 
@@ -160,8 +172,10 @@ prev.addEventListener("click", function (e) {
 next.addEventListener("click", function (e) {
   audioIndex = (audioIndex + 1) % audioLen;
   loadMusic(audioDB[audioIndex]);
+
   progressDiv.style.width = `0%`;
   music.currentTime = 0;
+  
   isPlaying ? playMusic() : pauseMusic();
 });
 
