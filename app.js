@@ -1,7 +1,4 @@
 "use strict";
-
-
-
 const music = document.querySelector("#music");
 
 const image = document.querySelector("#image");
@@ -61,6 +58,18 @@ const audioDB = [
     songUrl: "./music/359.mp3",
     artistName: "Divine",
     imageCover: "./Images/pexels-2.jpg"
+  },
+  {
+    songName: "Do I wanna know?",
+    songUrl: "./music/do-i-wanna.mp3",
+    artistName: "Arctic Monkeys",
+    imageCover: "./Images/pexels-3.jpg"
+  },
+  {
+    songName: "I wanna be yours",
+    songUrl: "./music/i-wanna-be-yours.mp3",
+    artistName: "Arctic Monkeys",
+    imageCover: "./Images/pexels-4.jpg"
   }
 ];
 
@@ -112,10 +121,10 @@ function loadMusic(audio) {
   artistName.innerText = audio.artistName;
   image.src = audio.imageCover;
 
-  musicList.childNodes.forEach(function(ele, index){
+  musicList.childNodes.forEach(function (ele, index) {
     ele.classList.remove("colorChange");
-    
-    if(audioIndex === index){
+
+    if (audioIndex === index) {
       console.log("Inside");
       ele.classList.add("colorChange");
     }
@@ -164,7 +173,7 @@ prev.addEventListener("click", function (e) {
 
   progressDiv.style.width = `0%`;
   music.currentTime = 0;
-  
+
   isPlaying ? playMusic() : pauseMusic();
 });
 
@@ -175,7 +184,7 @@ next.addEventListener("click", function (e) {
 
   progressDiv.style.width = `0%`;
   music.currentTime = 0;
-  
+
   isPlaying ? playMusic() : pauseMusic();
 });
 
